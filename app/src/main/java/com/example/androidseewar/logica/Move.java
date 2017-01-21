@@ -18,40 +18,38 @@ public class Move {
 	// Флаг повторного хода
 	private boolean flagRepeatStep = false;
 	// Счетчики палуб при попадании
-	private byte count = 0;
-	private byte count4 = 0;
+	private int count = 0;
+	private int count4 = 0;
 
 	// Растановка кораблей
-	Random ram = new Random();
-	int x;
-	int y;
-	int rotX;// Флаги вращения
-	int rotY;
+	private Random ram = new Random();
+	private int x;
+	private int y;
+	private int rotX;// Флаги вращения
+//	private int rotY;
 
 	// Позиции палуб при попандании в корабль (автоматический режим)
-	int positionX;
-	int positionY;
-	int positionX1;
-	int positionY1;
-	int positionX2;
-	int positionY2;
-	int newPositionX;
-	int newPositionY;
+	private int positionX;
+	private int positionY;
+	private int positionX1;
+	private int positionY1;
+	private int newPositionX;
+	private int newPositionY;
 
 	/*
 	 * Растановка кораблей field - игровое поле, paluba - количество палуб у
 	 * корабля, id - номер корабля. При расстановке корабля для него в ячейку
 	 * игрового поля записуется paluba * 10 + id
 	 */
-	public boolean Filling(Field field, int paluba, int id) {
+	public boolean filling(Field field, int paluba, int id) {
 		x = ram.nextInt(X_FILD);
 		y = ram.nextInt(Y_FILD);
 
 		rotX = ram.nextInt(2);
-		if (rotX == 0)
-			rotY = 1;
-		else
-			rotY = 0;
+//		if (rotX == 0)
+//			rotY = 1;
+//		else
+//			rotY = 0;
 
 		if (rotX == 1) {
 			if (x + paluba > X_FILD) {
@@ -113,7 +111,7 @@ public class Move {
 	/*
 	 * "Вода" при попадании в корабль (по диагоналям) для ускорения обстрела
 	 */
-	void waterShot(Field field, int positionX, int positionY) {
+	private void waterShot(Field field, int positionX, int positionY) {
 
 		if (positionX != 0) {
 			if (positionY != 0)
@@ -137,7 +135,7 @@ public class Move {
 	}
 
 	// Заполнение "Водой" вокруг ячейки x,y
-	void water(Field field, int x, int y) {
+	private void water(Field field, int x, int y) {
 
 		int k = x - 1;
 		int n = y - 1;
@@ -166,7 +164,7 @@ public class Move {
 	 * Логика выстрела компьютера fieldEtalon - поле с расставлеными
 	 * кораблями,Field fieldShot - поле выстрелов
 	 */
-	boolean logika(Field fieldEtalon, Field fieldShot) {
+	public boolean logika(Field fieldEtalon, Field fieldShot) {
 		// Проверка - стреляли в это место?
 		// Если да, то поле будет отличное от 0
 		do {
@@ -498,7 +496,7 @@ public class Move {
 	/*
 	 * Подсчет подбитых палуб на всем поле
 	 */
-	public byte getCount(Field field) {
+	public int getCount(Field field) {
 		count = 0;
 		for (int i = 0; i < field.mas.length; i++) {
 			for (int j = 0; j < field.mas[i].length; j++) {

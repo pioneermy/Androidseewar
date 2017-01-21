@@ -247,12 +247,12 @@ public class ActivityGame extends Activity implements OnItemClickListener,
 	}
 
 	public void onAnimationRepeat(Animation animation) {
-		// TODO Auto-generated method stub
+
 
 	}
 
 	public void onAnimationStart(Animation animation) {
-		// TODO Auto-generated method stub
+
 
 	}
 
@@ -261,7 +261,7 @@ public class ActivityGame extends Activity implements OnItemClickListener,
 	 */
 	@Override
 	protected void onPause() {
-		ActivityMenu.musicService.pause();
+		ActivityMenu.getMusicService().pause();
 		AudioApp.onPause();
 		super.onStop();
 	}
@@ -271,7 +271,7 @@ public class ActivityGame extends Activity implements OnItemClickListener,
 	 */
 	@Override
 	protected void onResume() {
-		ActivityMenu.musicService.resume();
+		ActivityMenu.getMusicService().resume();
 		AudioApp.onResume();
 		super.onResume();
 	}

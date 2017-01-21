@@ -1,19 +1,17 @@
 package com.example.androidseewar.service;
 
-import java.util.HashMap;
-import java.util.Map;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.util.SparseIntArray;
 
 import com.example.androidseewar.R;
 //звуковые эффекты	
 public class AudioApp {
 
-	private static SoundPool soundPool; // звуковые эффекты	
-	private static Map<Integer, Integer> soundArr;
-		
-	public static boolean isSound = true;
+	private static SoundPool soundPool; // звуковые эффекты
+
+	private static boolean isSound = true;
 	public static final int SOUND_BUTTON = 1;
 	public static final int SOUND_FIRE = 2;
 	public static final int SOUND_WATER = 3;
@@ -25,7 +23,7 @@ public class AudioApp {
 		// инициализация SoundPool, используемого для воспроизведения
 		// звуковых эффектов
 
-		soundArr = new HashMap<Integer, Integer>();
+		SparseIntArray soundArr = new SparseIntArray();
 
 		soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
 		soundArr.put(SOUND_BUTTON, soundPool.load(context, R.raw.soundbut, 1));
@@ -56,5 +54,9 @@ public class AudioApp {
 		if (soundPool != null) {			
 			soundPool.release();
 		}
-	}	
+	}
+
+	public static void setIsSound(boolean isSound) {
+		AudioApp.isSound = isSound;
+	}
 }

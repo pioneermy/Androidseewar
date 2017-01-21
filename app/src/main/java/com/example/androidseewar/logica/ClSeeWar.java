@@ -74,23 +74,19 @@ public class ClSeeWar {
 			int countShip3, int countShip4) {
 		// Четырехтрубный
 		for (int i = 0; i < countShip4; i++) {
-			while (!move.Filling(field, 4, i))
-				;
+			while (!move.filling(field, 4, i));
 		}
 		// Трехтрубный
 		for (int i = 0; i < countShip3; i++) {
-			while (!move.Filling(field, 3, i))
-				;
+			while (!move.filling(field, 3, i));
 		}
 		// Двухтрубный
 		for (int i = 0; i < countShip2; i++) {
-			while (!move.Filling(field, 2, i))
-				;
+			while (!move.filling(field, 2, i));
 		}
 		// Однотрубныйтрубный
 		for (int i = 0; i < countShip1; i++) {
-			while (!move.Filling(field, 1, i))
-				;
+			while (!move.filling(field, 1, i));
 		}
 	}
 
@@ -149,8 +145,7 @@ public class ClSeeWar {
 			move.shotShop4(fieldUser, fieldShot);
 		} else
 			// Случайный выстрел компьютера
-			while (!move.logika(fieldUser, fieldShot))
-				;
+			while (!move.logika(fieldUser, fieldShot));
 		// Смешать поля кораблей и выстрелов для вывода на экран	
 		move.screen(fieldScreenShot, fieldUser, fieldShot);
 

@@ -4,10 +4,6 @@ package com.example.androidseewar.logica;
  */
 public class Field {
 	public int[][] mas;
-
-	Field() {
-		this(10, 10);
-	}
 // Инициализация пустого игрового поля
 	Field(int x, int y) {
 		mas = new int[x][y];
@@ -23,22 +19,27 @@ public class Field {
  */
 	@Override
 	public String toString() {
-		String str = "";
+		StringBuilder buf = new StringBuilder();
+
 		for (int i = 0; i < mas.length; i++) {
 			for (int j = 0; j < mas[i].length; j++) {
 				if (mas[j][i] == 0) {
-					str += " " + " ";
+					buf.append(" ");
+					buf.append(" ");
 				} else if (mas[j][i] == 8) {
-					str += "." + " ";
+					buf.append(".");
+					buf.append(" ");
 				} else
-				// str += "X" + " ";
-
+//					buf.append("X");
+//					buf.append(" ");
 				{
-					str += mas[j][i] + " ";
+					buf.append(mas[j][i]);
+					buf.append(" ");
 				}
 			}
-			str += "\n";
+			buf.append("\n");
+
 		}
-		return str;
+		return buf.toString();
 	}
 }

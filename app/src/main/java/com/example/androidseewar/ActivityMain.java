@@ -40,10 +40,10 @@ public class ActivityMain extends Activity implements AnimationListener {
 	}
 
 	public void onAnimationRepeat(Animation animation) {
-		// TODO Auto-generated method stub
+
 	}
 
 	public void onAnimationStart(Animation animation) {
-		// TODO Auto-generated method stub
+
 	}
 }

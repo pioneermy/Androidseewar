@@ -36,7 +36,7 @@ public class ActivityMenu extends Activity implements OnClickListener,
 	private View idButton;
 
 	private ServiceConnection sConn;
-	public static MusicService musicService;
+	private static MusicService musicService;
 	private boolean flagOnStop = false;
 	private boolean flagOnActivity = false;
 
@@ -86,10 +86,10 @@ public class ActivityMenu extends Activity implements OnClickListener,
 
 		if (toggleButtonAudio.isChecked()) {
 			toggleButtonAudio.setBackgroundResource(R.drawable.noaudio);
-			AudioApp.isSound = false;
+			AudioApp.setIsSound(false);
 		} else {
 			toggleButtonAudio.setBackgroundResource(R.drawable.audio);
-			AudioApp.isSound = true;
+			AudioApp.setIsSound(true);
 		}
 
 		buttonPlay = (Button) findViewById(R.id.buttonPlay);
@@ -157,10 +157,10 @@ public class ActivityMenu extends Activity implements OnClickListener,
 			// Sound
 			if (isChecked) {
 				toggleButtonAudio.setBackgroundResource(R.drawable.noaudio);
-				AudioApp.isSound = false;
+				AudioApp.setIsSound(false);
 			} else {
 				toggleButtonAudio.setBackgroundResource(R.drawable.audio);
-				AudioApp.isSound = true;
+				AudioApp.setIsSound(true);
 			}
 			toggleButtonAudio.startAnimation(animation);
 			ed.putBoolean("isCheckedAudio", isChecked);
@@ -230,10 +230,14 @@ public class ActivityMenu extends Activity implements OnClickListener,
 	}
 
 	public void onAnimationRepeat(Animation animation) {
-		// TODO Auto-generated method stub
+
 	}
 
 	public void onAnimationStart(Animation animation) {
-		// TODO Auto-generated method stub
+
+	}
+
+	public static MusicService getMusicService() {
+		return musicService;
 	}
 }

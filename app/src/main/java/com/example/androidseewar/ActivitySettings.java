@@ -138,12 +138,10 @@ public class ActivitySettings extends Activity implements OnClickListener,
 	}
 
 	public void onStartTrackingTouch(SeekBar seekBar) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public void onStopTrackingTouch(SeekBar seekBar) {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -223,12 +221,12 @@ public class ActivitySettings extends Activity implements OnClickListener,
 	}
 
 	public void onAnimationRepeat(Animation animation) {
-		// TODO Auto-generated method stub
+
 
 	}
 
 	public void onAnimationStart(Animation animation) {
-		// TODO Auto-generated method stub
+
 
 	}
 
@@ -238,7 +236,7 @@ public class ActivitySettings extends Activity implements OnClickListener,
 	@Override
 	protected void onPause() {
 		// Пауза для сервиса фоновой музыки
-		ActivityMenu.musicService.pause();
+		ActivityMenu.getMusicService().pause();
 		super.onPause();
 	}
 
@@ -248,7 +246,7 @@ public class ActivitySettings extends Activity implements OnClickListener,
 	@Override
 	protected void onResume() {
 		// Рестарт фоновой музыки
-		ActivityMenu.musicService.resume();
+		ActivityMenu.getMusicService().resume();
 		super.onResume();
 	}
 }
