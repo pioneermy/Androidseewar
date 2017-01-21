@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FrameLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ActivityMenu" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical" >
+
+        <ToggleButton
+            android:id="@+id/toggleButtonAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/audio"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+
+        <ToggleButton
+            android:id="@+id/toggleButtonMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/music"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/buttonPlay"
+            style="@style/AppTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/buttonmenu"
+            android:text="@string/buttonPlay"
+            android:textColor="@color/gold"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/buttonSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/buttonmenu"
+            android:text="@string/battonSettings"
+            android:textColor="@color/gold"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/buttonExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/buttonmenu"
+            android:text="@string/buttonExit"
+            android:textColor="@color/gold"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+    </LinearLayout>
+
+</FrameLayout>

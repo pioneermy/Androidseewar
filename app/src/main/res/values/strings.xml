@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">AndroidSeeWar</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">The War of See</string>
+    <string name="onButton" />
+    <string name="offButton" />
+    <string name="buttonPlay">New Game</string>
+    <string name="buttonExit">Exit</string>
+    <string name="battonSettings">Options</string>
+    <string name="compWin">Comp WIN !!!</string>
+    <string name="userWin">You WIN !!!</string>
+    <string name="title_activity_activity_settings">ActivitySettings</string>
+    <string name="step">Step:</string>
+    <string name="strong">Уровень сложности:</string>
+    <string name="easy">Легко</string>
+    <string name="normal">Нормально</string>
+    <string name="difficult">Сложно</string>
+    <string name="radioGrup">Количество кораблей:</string>
+    <string name="ship1">Однотрубных:</string>
+    <string name="ship2">Двухтрубных:</string>
+    <string name="ship3">Трехтрубных:</string>
+    <string name="ship4">Четырехтрубных:</string>
+    <string name="buttonOk">Ok</string>
+    <string name="buttonCansel">Cansel</string>    
+
+</resources>
