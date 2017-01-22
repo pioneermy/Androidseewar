@@ -2,5 +2,5 @@
 app/build/
 .idea/
 build/
-gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/
 gradle/
