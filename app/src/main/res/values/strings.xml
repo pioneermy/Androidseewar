@@ -22,6 +22,7 @@
     <string name="ship3">Трехтрубных:</string>
     <string name="ship4">Четырехтрубных:</string>
     <string name="buttonOk">Ok</string>
-    <string name="buttonCansel">Cansel</string>    
+    <string name="buttonCansel">Cansel</string>
+    <string name="logo">LOGO</string>
 
 </resources>

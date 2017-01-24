@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgrgame"
-    tools:context=".ActivityGame" >
-
+    tools:context=".ActivityGame">
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,27 +15,31 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="20dp" >
-
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false">
+
         <GridView
             android:id="@+id/gridView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left|center_vertical"
+            android:layout_gravity="center_vertical"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:numColumns="10" >
+            android:numColumns="10"
+            tools:ignore="RtlHardcoded">
 
         </GridView>
-
+
+
         <GridView
             android:id="@+id/gridView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right|center_vertical"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:numColumns="10" >
+            android:numColumns="10"
+            tools:ignore="RtlHardcoded">
 
         </GridView>
     </LinearLayout>
@@ -48,40 +53,46 @@
         android:textColor="@color/gold"
         android:textSize="50sp"
         android:visibility="invisible" />
-
+
+
     <TextView
         android:id="@+id/textViewComp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/black" />
-
+        android:textColor="@color/black"
+        tools:ignore="RtlHardcoded" />
+
+
     <TextView
         android:id="@+id/textViewUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
+        android:layout_gravity="end"
         android:layout_marginRight="10dp"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        tools:ignore="RtlHardcoded" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|center_horizontal" >
+        android:layout_gravity="center_vertical|center_horizontal">
 
         <Button
             android:id="@+id/buttonRepeat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/repeat"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:id="@+id/buttonOk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ok"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="ButtonStyle" />
     </LinearLayout>
 
 </FrameLayout>

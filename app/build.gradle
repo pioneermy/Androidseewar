@@ -1,27 +1,59 @@
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
 
 android {
-    compileSdkVersion 14
+    signingConfigs {
+        release {
+            keyAlias 'release'
+            keyPassword KEY_PASSWORD
+            storeFile file('C:/key/seewar.jks')
+            storePassword KEYSTORE_PASSWORD
+        }
+    }
+
+    compileSdkVersion 23
     buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "com.example.androidseewar"
-        minSdkVersion 8
-        targetSdkVersion 15
+        minSdkVersion 14
+        targetSdkVersion 23
         compileOptions {
             sourceCompatibility JavaVersion.VERSION_1_5
             targetCompatibility JavaVersion.VERSION_1_5
         }
     }
+    productFlavors {
+        free {
+            applicationId 'com.example.androidseewar'
+            versionName "1.0"
+            minSdkVersion 14
+            targetSdkVersion 23
+        }
+    }
 
     buildTypes {
         release {
-            minifyEnabled false
+            signingConfig signingConfigs.release
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        debug {
+            minifyEnabled false
         }
     }
 }
 
-dependencies {
-    compile 'com.android.support:support-v4:18.0.0'
+    dependencies {
+        compile fileTree(dir: 'libs', include: ['*.jar'])
+        testCompile 'junit:junit:4.12'
+        compile 'com.android.support:appcompat-v7:23.1.1'
+        compile 'com.android.support:design:23.1.1'
+        compile('com.crashlytics.sdk.android:crashlytics:2.6.6@aar') {
+            transitive = true;
+        }
 }

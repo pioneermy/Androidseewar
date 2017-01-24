@@ -5,20 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".ActivityMenu" >
+    tools:context=".ActivityMenu">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left|center_vertical"
+        android:layout_gravity="start|center_vertical"
         android:layout_marginLeft="20dp"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        tools:ignore="RtlHardcoded">
 
         <ToggleButton
             android:id="@+id/toggleButtonAudio"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_height="0dp"
+
+            android:layout_weight="1"
             android:background="@drawable/audio"
             android:checked="false"
             android:text=""
@@ -39,22 +41,24 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right|center_vertical"
-        android:orientation="vertical" >
-
+        android:layout_gravity="end|center_vertical"
+        android:orientation="vertical">
+
+
         <Button
             android:id="@+id/buttonPlay"
-            style="@style/AppTheme"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:background="@drawable/buttonmenu"
             android:text="@string/buttonPlay"
             android:textColor="@color/gold"
             android:textStyle="bold|italic"
-            android:typeface="serif" />
-
+            android:typeface="serif"
+            android:layout_weight="1" />
+
+
         <Button
             android:id="@+id/buttonSettings"
             android:layout_width="wrap_content"
@@ -66,7 +70,8 @@
             android:textColor="@color/gold"
             android:textStyle="bold|italic"
             android:typeface="serif" />
-
+
+
         <Button
             android:id="@+id/buttonExit"
             android:layout_width="wrap_content"

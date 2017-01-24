@@ -1,48 +1,43 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androidseewar"
     android:installLocation="preferExternal"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="1">
 
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
         <activity
             android:name=".ActivityMain"
             android:label="@string/title_activity_main"
             android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ActivityMenu"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
-        </activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ActivityGame"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
-        </activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ActivitySettings"
             android:label="@string/title_activity_activity_settings"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
-        </activity>
+            android:screenOrientation="landscape" />
 
         <service
             android:name=".service.MusicService"
-            android:enabled="true" >
-        </service>
+            android:enabled="true" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="f4d108f5265adf3b5d7a8e009e18bb27ae1c12b7" />
     </application>
 
 </manifest>
